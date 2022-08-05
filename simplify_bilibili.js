@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         简化b站
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.11
 // @license      GPL
 // @description  去除了b站的导航栏（根据chrome来制作的，其他的浏览器兼容性可能不好，脚本做的不太好）
 // @author       You
