@@ -7,6 +7,7 @@
 // @author       You
 // @match        *://*.bilibili.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=bilibili.com
+// @updateURL    https://github.com/bahyqn/simplify_bilibili
 // @grant        none
 // ==/UserScript==
 
