@@ -65,17 +65,34 @@
                 li[i].style.visibility = "hidden";
             }
 
-            try {
-                let right_div = document.getElementsByClassName('user-con signin').item(0);
-                console.log(right_div);
-                let child = right_div.querySelectorAll('.item');
-                console.log(child)
-                for (let i = 1; i < 5; i++) {
-                    child[i].remove();
+            let right_div = null;
+            let time = setInterval(function () {
+                right_div = document.getElementsByClassName('user-con signin').item(0);
+                if (right_div != null) {
+                    let child = right_div.querySelectorAll('.item');
+                    console.log(child)
+                    for (let i = 1; i < 5; i++) {
+                        child[i].remove();
+                    }
+                    clearInterval(time);
                 }
-            } catch (e) {
-                console.log('not delete');
-            }
+            }, 200);
+        }
+
+        function remove_search() {
+            // remove search
+            let left_entry = document.getElementsByClassName('left-entry')[0].style.visibility = 'hidden';
+            let right_entry = null;
+            let time = setInterval(function () {
+                right_entry = document.getElementsByClassName('bili-header__bar')[0].getElementsByClassName('right-entry')[0];
+                if (right_entry != null) {
+                    let lis = right_entry.querySelectorAll('.v-popover-wrap');
+                    lis[1].style.display = 'none';
+                    lis[2].style.display = 'none';
+                    lis[3].style.display = 'none';
+                    clearInterval(time)
+                }
+            }, 200);
         }
 
         window.onload = function () {
@@ -84,12 +101,12 @@
 
             if (url_list[1].length <= 3) {
                 remove_index();
+            } else if (url_list[1].indexOf('all') == 1){
+                remove_search();
+            } else if (url_list[1].indexOf('video') == 1) {
+                remove_video()
             } else {
-                if (url_list[1].indexOf('video') == 1) {
-                    remove_video();
-                } else {
-                    remove_other();
-                }
+                remove_other()
             }
         }
     }
