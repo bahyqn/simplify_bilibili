@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         简化b站
+// @name         简化b站导航栏
 // @namespace    http://tampermonkey.net/
 // @version      0.12
 // @license      GPL
-// @description  去除了b站的导航栏（根据chrome来制作的，其他的浏览器兼容性可能不好，脚本做的不太好）
-// @author       You
+// @description  去除了b站的导航栏
+// @author       bahyqn
 // @match        *://*.bilibili.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=bilibili.com
 // @updateURL    https://github.com/bahyqn/simplify_bilibili
