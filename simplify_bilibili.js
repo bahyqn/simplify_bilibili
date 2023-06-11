@@ -3,11 +3,10 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.12
 // @license      GPL
-// @description  去除了b站的导航栏
+// @description  去除了b站的导航栏（要先手动推出内测）
 // @author       bahyqn
 // @match        *://*.bilibili.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=bilibili.com
-// @updateURL    https://github.com/bahyqn/simplify_bilibili
 // @grant        none
 // @note         2022-08-07-V0.12 增加了搜索页的删除导航栏
 // ==/UserScript==
@@ -112,5 +111,4 @@
         }
     }
 
-)
-();
+)();
