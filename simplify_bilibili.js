@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.12
 // @license      GPL
-// @description  去除了b站的导航栏（要先手动推出内测）
+// @description  去除了b站的导航栏（要先手动退出内测，等哪天老鸽子想写的时候重新构建下，加入选项来按需删除）
 // @author       bahyqn
 // @match        *://*.bilibili.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=bilibili.com
