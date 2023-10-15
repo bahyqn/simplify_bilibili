@@ -35,7 +35,7 @@
             bili_header__channel[0].remove();
 
             var bili_layout = document.getElementsByClassName('feed2');
-            //bili_layout[0].style.marginTop = "2rem";
+            bili_layout[0].style.marginTop = "2rem";
 
             var recommended_swipe = document.getElementsByClassName('recommended-swipe grid-anchor');
             // console.log(recommended_swipe);
@@ -43,7 +43,6 @@
 
             var body = document.getElementsByClassName('feed-card');
             //console.log(body);
-
             remove_ad();
         }
 
