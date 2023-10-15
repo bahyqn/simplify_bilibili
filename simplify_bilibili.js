@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         简化b站导航栏
 // @namespace    http://tampermonkey.net/
-// @version      0.12
+// @version      0.13
 // @license      GPL
-// @description  去除了b站的导航栏（要先手动退出内测，等哪天老鸽子想写的时候重新构建下，加入选项来按需删除）
+// @description  点换一换会让页面上的那个广告再显示出来
 // @author       bahyqn
 // @match        *://*.bilibili.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=bilibili.com
 // @grant        none
-// @note         2022-08-07-V0.12 增加了搜索页的删除导航栏
+// @note         2023-10-15-V0.13 重新改了下代码
 // ==/UserScript==
 
 (function () {
@@ -34,11 +34,40 @@
             var bili_header__channel = document.getElementsByClassName('bili-header__channel');
             bili_header__channel[0].remove();
 
-            var bili_layout = document.getElementsByClassName('bili-layout');
-            bili_layout[0].style.marginTop = "2rem";
+            var bili_layout = document.getElementsByClassName('feed2');
+            //bili_layout[0].style.marginTop = "2rem";
 
-            var recommended_swipe = document.getElementsByClassName('recommended-swipe');
+            var recommended_swipe = document.getElementsByClassName('recommended-swipe grid-anchor');
+            // console.log(recommended_swipe);
             recommended_swipe[0].remove();
+
+            var body = document.getElementsByClassName('feed-card');
+            //console.log(body);
+
+            remove_ad();
+        }
+
+        function remove_ad(){
+            var body = document.getElementsByClassName('feed-card');
+            //console.log(body);
+
+            let flag = 0;
+            for(let i = 0; i < body.length; i++){
+                body[i].style.marginTop = "2rem";
+                let child = body[i].getElementsByClassName('bili-video-card is-rcmd');
+                child = body[i].getElementsByClassName('bili-video-card is-rcmd');
+                child = body[i].getElementsByClassName('bili-video-card__wrap __scale-wrap');
+                child = body[i].getElementsByClassName('');
+                child = body[i].getElementsByClassName('bili-video-card__info __scale-disable');
+                child = body[i].getElementsByClassName('bili-video-card__info--right');
+                child = body[i].getElementsByClassName('bili-video-card__info--bottom');
+                child = body[i].getElementsByClassName('bili-video-card__info--ad');
+
+                if(child.length > 0){
+                    flag = i;
+                }
+            }
+            body[flag].remove();
         }
 
         function remove_video() {
@@ -106,7 +135,7 @@
             } else if (url_list[1].indexOf('video') == 1) {
                 remove_video()
             } else {
-                remove_other()
+                remove_other();
             }
         }
     }
