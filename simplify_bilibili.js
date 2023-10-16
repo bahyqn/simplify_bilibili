@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         简化b站导航栏
 // @namespace    http://tampermonkey.net/
-// @version      0.13
+// @version      0.14
 // @license      GPL
 // @description  点换一换会让页面上的那个广告再显示出来
 // @author       bahyqn
 // @match        *://*.bilibili.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=bilibili.com
 // @grant        none
-// @note         2023-10-15-V0.13 重新改了下代码
+// @note         2023-10-15-V0.14 重新改了下代码
 // ==/UserScript==
 
 (function () {
