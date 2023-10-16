@@ -31,12 +31,14 @@
                 }
             }, 200);
 
+            // 六个视频上的菜单
             var bili_header__channel = document.getElementsByClassName('bili-header__channel');
             bili_header__channel[0].remove();
 
             var bili_layout = document.getElementsByClassName('feed2');
             bili_layout[0].style.marginTop = "2rem";
 
+            // 六个视频左边的那个窗口
             var recommended_swipe = document.getElementsByClassName('recommended-swipe grid-anchor');
             // console.log(recommended_swipe);
             recommended_swipe[0].remove();
@@ -52,7 +54,7 @@
 
             let flag = 0;
             for(let i = 0; i < body.length; i++){
-                body[i].style.marginTop = "2rem";
+                //body[i].style.marginTop = "2rem";
                 let child = body[i].getElementsByClassName('bili-video-card is-rcmd');
                 child = body[i].getElementsByClassName('bili-video-card is-rcmd');
                 child = body[i].getElementsByClassName('bili-video-card__wrap __scale-wrap');
